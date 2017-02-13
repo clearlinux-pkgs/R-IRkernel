@@ -56,4 +56,4 @@ cp %{SOURCE12} %{buildroot}/usr/share/jupyter/kernels/ir/
 %files
 %defattr(-,root,root,-)
 /usr/lib64/R/library/IRkernel/
-/usr/share/jupyter/kernels/ir/usr/share/jupyter/kernels/ir
+/usr/share/jupyter/kernels/ir
