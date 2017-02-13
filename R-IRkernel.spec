@@ -1,8 +1,11 @@
 Name     : R-IRkernel
 Version  : 0.7
-Release  : 1
+Release  : 2
 URL      : https://github.com/IRkernel/IRkernel/archive/0.7.tar.gz
 Source0  : https://github.com/IRkernel/IRkernel/archive/0.7.tar.gz
+Source10 : kernel.js
+Source11 : kernel.json
+Source12 : logo-64x64.png
 Summary  : Native R Kernel for the 'Jupyter Notebook'
 Group    : Development/Tools
 License  : MIT
@@ -45,8 +48,12 @@ export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
 R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library IRkernel-0.7
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
-
+mkdir -p %{buildroot}/usr/share/jupyter/kernels/ir
+cp %{SOURCE10} %{buildroot}/usr/share/jupyter/kernels/ir/
+cp %{SOURCE11} %{buildroot}/usr/share/jupyter/kernels/ir/
+cp %{SOURCE12} %{buildroot}/usr/share/jupyter/kernels/ir/
 
 %files
 %defattr(-,root,root,-)
 /usr/lib64/R/library/IRkernel/
+/usr/share/jupyter/kernels/ir/usr/share/jupyter/kernels/ir
