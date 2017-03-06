@@ -1,6 +1,6 @@
 Name     : R-IRkernel
 Version  : 0.7
-Release  : 3
+Release  : 4
 URL      : https://github.com/IRkernel/IRkernel/archive/0.7.tar.gz
 Source0  : https://github.com/IRkernel/IRkernel/archive/0.7.tar.gz
 Source10 : kernel.js
