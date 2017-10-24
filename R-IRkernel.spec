@@ -1,8 +1,8 @@
 Name     : R-IRkernel
-Version  : 0.8.9
+Version  : 0.8.11
 Release  : 11
-URL      : https://github.com/IRkernel/IRkernel/archive/0.8.9.tar.gz
-Source0  : https://github.com/IRkernel/IRkernel/archive/0.8.9.tar.gz
+URL      : https://github.com/IRkernel/IRkernel/archive/0.8.11.tar.gz
+Source0  : https://github.com/IRkernel/IRkernel/archive/0.8.11.tar.gz
 Source10 : kernel.js
 Source11 : kernel.json
 Source12 : logo-64x64.png
@@ -28,7 +28,7 @@ Requires : R-stringi
 [Travis]: https://travis-ci.org/IRkernel/IRkernel
 
 %prep
-%setup -q -c -n IRkernel-0.8.9
+%setup -q -c -n IRkernel-0.8.11
 
 %build
 export LANG=C
@@ -46,7 +46,7 @@ export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
-R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library IRkernel-0.8.9
+R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library IRkernel-0.8.11
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 mkdir -p %{buildroot}/usr/share/jupyter/kernels/ir
 cp %{SOURCE10} %{buildroot}/usr/share/jupyter/kernels/ir/
