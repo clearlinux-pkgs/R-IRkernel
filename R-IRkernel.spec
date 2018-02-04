@@ -15,17 +15,17 @@ BuildRequires : R-pbdZMQ
 BuildRequires : R-jsonlite
 BuildRequires : R-uuid
 BuildRequires : R-stringi
+BuildRequires : R-evaluate
 
 Requires : R-IRdisplay
 Requires : R-pbdZMQ
 Requires : R-jsonlite
 Requires : R-uuid
 Requires : R-stringi
+Requires : R-evaluate
 
 %description
-# Native R kernel for Jupyter [![Build Status]][Travis]
-[Build Status]: https://travis-ci.org/IRkernel/IRkernel.svg?branch=master
-[Travis]: https://travis-ci.org/IRkernel/IRkernel
+Native R kernel for Jupyter 
 
 %prep
 %setup -q -c -n IRkernel-0.8.11
