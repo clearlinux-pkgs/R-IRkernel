@@ -9,13 +9,14 @@ Source12 : logo-64x64.png
 Summary  : Native R Kernel for the 'Jupyter Notebook'
 Group    : Development/Tools
 License  : MIT
-BuildRequires : clr-R-helpers
+BuildRequires : clr-R-helpers buildreq-R
 BuildRequires : R-IRdisplay
 BuildRequires : R-pbdZMQ
 BuildRequires : R-jsonlite
 BuildRequires : R-uuid
 BuildRequires : R-stringi
 BuildRequires : R-evaluate
+BuildRequires : R-repr
 
 Requires : R-IRdisplay
 Requires : R-pbdZMQ
