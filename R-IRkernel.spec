@@ -16,7 +16,7 @@ BuildRequires : R-jsonlite
 BuildRequires : R-uuid
 BuildRequires : R-stringi
 BuildRequires : R-evaluate
-BuildRequires : R-repr
+BuildRequires : R-repr R-base64enc R-htmltools
 
 Requires : R-IRdisplay
 Requires : R-pbdZMQ
