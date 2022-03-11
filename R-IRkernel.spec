@@ -1,6 +1,6 @@
 Name     : R-IRkernel
 Version  : 1.3
-Release  : 53
+Release  : 54
 URL      : https://cran.r-project.org/src/contrib/IRkernel_1.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/IRkernel_1.3.tar.gz
 Source10 : kernel.js
